@@ -27,9 +27,7 @@ export default function TeamMailPage() {
   const [body, setBody] = useState("");
   const [selectedContact, setSelectedContact] = useState<typeof MOCK_CONTACTS[0] | null>(null);
 
-  useEffect(() => {
-    if (status === "unauthenticated") router.push("/");
-  }, [status, router]);
+  useEffect(() => {}, []);
 
   const handleSelectContact = (email: string) => {
     const contact = MOCK_CONTACTS.find(c => c.email === email);

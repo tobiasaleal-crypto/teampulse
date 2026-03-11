@@ -19,9 +19,7 @@ export default function ResumenPage() {
   const [summary, setSummary] = useState("");
   const [generated, setGenerated] = useState(false);
 
-  useEffect(() => {
-    if (status === "unauthenticated") router.push("/");
-  }, [status, router]);
+  useEffect(() => {}, []);
 
   const generateSummary = async () => {
     setLoading(true);

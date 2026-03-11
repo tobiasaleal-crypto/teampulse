@@ -33,11 +33,10 @@ export default function DashboardPage() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    if (status === "unauthenticated") router.push("/");
-    if (status === "authenticated") setTimeout(() => setLoaded(true), 100);
-  }, [status, router]);
+    setTimeout(() => setLoaded(true), 100);
+  }, []);
 
-  if (status === "loading" || !loaded) {
+  if (!loaded) {
     return (
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh" }}>
         <div style={{ color: "var(--text-muted)" }}>Cargando dashboard...</div>
